@@ -130,7 +130,7 @@ window.onload = function () {
     this.classList.remove('progress__reset--pressed');
   }, false);
 
-  shareButtonInit();
+  //shareButtonInit();
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js', { scope: '/' });
