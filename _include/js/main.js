@@ -44,6 +44,9 @@ function countChecked() {
       const checklistCheckedPercentage = checklist.querySelectorAll('input:checked').length / checklist.querySelectorAll('.checklist-item').length;
       checklist.querySelector('.checklist__percentage-border').style.transform = `scaleX(${checklistCheckedPercentage})`;
     });
+    Array.from(document.querySelectorAll('.checklist')).forEach((checklist) => {
+
+    });
   }
 
   let globalCheckedCounter = 0;

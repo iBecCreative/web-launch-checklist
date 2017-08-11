@@ -42,16 +42,305 @@
 </head>
 <body>
 <header>
-    <h1 class="title"><a href="/">Web Launch Checklist</a></h1>
+    <h1 class="title">Web Launch Checklist</h1>
+    <div class="dev-notes">
+        <h3>Project:</h3>
+        <h3>Developed by:</h3>
+        <h3>Dev QA by:</h3>
+        <h3>Design QA by:</h3>
+    </div>
     <div class="progress">
         <span class="progress__count">0/X</span>
         <input class="progress__reset" type="reset" value="Reset" title="Reset Checkboxes" tabindex="0">
         <span class="progress__border"></span>
         <span class="progress__bar"></span>
+        <input class="progress__reset" type="reset" value="Print this checklist" title="Print" onclick="window.print();">
     </div>
 
 </header>
 <div class="container">
+    <section class="checklist">
+        <h2 class="checklist__title">Backend Dev</h2>
+        <span class="checklist__title-border"></span>
+        <span class="checklist__percentage-border"></span>
+        <ul class="checklist-container">
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Create a development site</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">Create the domain [clientname].ibec.me (on iBec Linode) and 
+                        point this A record to the development server IP address. 
+                        
+                        Add the htpassword snippet to the top of the .htaccess file:
+
+                        #################################################
+                        ### NOFOLLOW/PASSWORD SECTION                 ###
+                        ###                                           ###
+                        ### DELETE OR COMMENT THIS SECTION FOR LAUNCH ###
+                        ### DO NOT DELETE OR DISABLE ON DEV           ###
+                        #################################################
+                        Header set X-Robots-Tag "noindex, nofollow"
+                        AuthUserFile /etc/users
+                        AuthType Basic
+                        AuthName "Restricted Area"
+                        AuthGroupFile /dev/null
+                        Require valid-user
+                        #################################################
+                        ### END NOFOLLOW/PASSWORD SECTION             ###
+                        #################################################
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Add cPanel/sFTP information to LastPass</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">If it's not already there.
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Develop backend functionality</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Set up and test analytics</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">Including any new goals (form submissions, etc) that may need to be added
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Thoroughly test any new forms/functionality</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">As needed
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Make sure new functionality is client editable</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">As needed
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="checklist">
+        <h2 class="checklist__title">Frontend Dev</h2>
+        <span class="checklist__title-border"></span>
+        <span class="checklist__percentage-border"></span>
+        <ul class="checklist-container">
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Develop frontend according to designs</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Integrate content as needed</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Check site with Google PageSpeed Insights/Lighthouse</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info"><a href="https://developers.google.com/speed/pagespeed/insights/">Link</a>
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Check Google Mobile Friendly Test</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">Make any appropriate changes: <a href="https://www.google.com/webmasters/tools/mobile-friendly/">Link</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="checklist">
+        <h2 class="checklist__title">Browser Testing</h2>
+        <span class="checklist__title-border"></span>
+        <span class="checklist__percentage-border"></span>
+        <ul class="checklist-container">
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Windows - IE 11</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">(sorry)
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Windows - IE Edge</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Windows - Chrome</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Windows - Firefox</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Mac - Chrome</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Mac - Safari</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Mac - Firefox</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">iPhone SE/6/7, iPad - Safari</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">iPhone SE/6/7, iPad - Chrome</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Android - Chrome</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Android Tablet - Chrome</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
     <section class="checklist">
         <h2 class="checklist__title">Performance</h2>
         <span class="checklist__title-border"></span>
@@ -243,7 +532,6 @@
                 </div>
             </li>
         </ul>
-
     </section>
     <section class="checklist">
         <h2 class="checklist__title">SEO</h2>
@@ -718,33 +1006,214 @@
             </li>
         </ul>
     </section>
+
+     <section class="checklist">
+        <h2 class="checklist__title">QA</h2>
+        <span class="checklist__title-border"></span>
+        <span class="checklist__percentage-border"></span>
+        <ul class="checklist-container">
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Development QA</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">Complete any edits necessary
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Design QA</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">Complete any edits needed
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Client edits</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">Complete any edits needed
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="checklist">
+        <h2 class="checklist__title">Pre-launch</h2>
+        <span class="checklist__title-border"></span>
+        <span class="checklist__percentage-border"></span>
+        <ul class="checklist-container">
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Make sure final content has been added</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Make sure alt tags are filled out for all images</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Add any needed 301s</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Add proper recipients to all forms</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="checklist">
+        <h2 class="checklist__title">Launch</h2>
+        <span class="checklist__title-border"></span>
+        <span class="checklist__percentage-border"></span>
+        <ul class="checklist-container">
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Transfer updates to live server</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Check .htaccess and robots.txt</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">Make sure nothing is being blocked
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Test any 301s</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Test any new forms</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">Remove test entries when finished
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Verify analytics are tracking</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">Test any new goals
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Update XML sitemap if needed</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Clear any site caches</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+            <li class="checklist-item">
+                <input id="" type="checkbox"/><label for="" class="checkbox"></label><span
+                    class="checklist-item__title">Test all new functionality</span>
+                <button class="checklist-item__expand" aria-label="Toggle Info" title="Toggle More Information">
+                    <span class="line"></span>
+                </button>
+
+                <div class="info-container">
+                    <div class="info">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    
 </div>
-<section class="social">
-        Share this page
-        <span class="social-buttons">
-                <a title="Share on Twitter" class="social-buttons__twitter"></a>
-                <a title="Share on Facebook" class="social-buttons__facebook"></a>
-        </span>
-</section>
 
 <footer>
-    Website created by <a target="_blank" rel="noopener" href="https://harrisjt.com">HarrisJT</a> <span>/</span> View
-    the source code and suggest edits
-    on <a target="_blank" rel="noopener" href="https://github.com/HarrisJT/web-launch-checklist">Github</a>
-    <span>/</span>
-    Download <a href="WebLaunchChecklist.docx" download>docx</a> or <a href="WebLaunchChecklist.pdf" download>pdf</a> versions
+
 </footer>
 
-<script>
-  window.ga = window.ga || function () {
-        (ga.q = ga.q || []).push(arguments)
-      };
-  ga.l = +new Date;
-
-  ga('create', 'UA-100237888-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
 </body>
 </html>
 

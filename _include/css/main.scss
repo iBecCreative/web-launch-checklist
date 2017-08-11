@@ -78,6 +78,11 @@ button:-moz-focusring,
   padding: 0;
 }
 
+// VARIABLES ============================================================================
+$blue: #0A4F87;
+$yellow: #FBCA53;
+$teal: #2FA1AD;
+
 // BASE STYLES ==========================================================================
 *,
 *:before,
@@ -95,7 +100,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #585afa;
+  background: $blue;
   color: #f5f5f5;
 }
 
@@ -133,6 +138,11 @@ a {
     color: #e6e6e6;
     border: 0;
   }
+}
+
+.dev-notes {
+  padding-left:25px;
+  display:none;
 }
 
 .progress {
@@ -180,7 +190,7 @@ a {
   &__border {
     display: block;
     margin-top: 12px;
-    border-bottom: 3px solid #57d490;
+    border-bottom: 3px solid $teal;
     box-shadow: 0 20px 20px -20px rgba(33, 16, 118, .65);
   }
 
@@ -189,7 +199,7 @@ a {
     transform: scaleX(0);
     transform-origin: left;
     height: 17px;
-    background: #21acb3;
+    background: $yellow;
     transition: transform 500ms ease;
   }
 }
@@ -198,14 +208,16 @@ a {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 0 auto;
   max-width: 1550px;
 
   .checklist {
-    max-width: 400px;
-    min-width: 350px;
+    width:300px;
     margin: 15px 15px 0;
+    @media screen and (min-width:480px) {
+      width:400px;
+    }
 
     .checklist-container {
       margin: 0;
@@ -223,20 +235,20 @@ a {
 
 .checklist__title-border {
   display: block;
-  width: 350px;
+  width: 100%;
   margin-top: 8px;
-  border-bottom: 2px solid #21acb3;
+  border-bottom: 2px solid $yellow;
   box-shadow: 0 15px 15px -15px rgba(33, 16, 118, .5);
 }
 
 .checklist__percentage-border {
   display: block;
   transform: scaleX(0);
-  width: 350px;
+  width: 100%;//350px;
   transform-origin: left;
   margin-bottom: 8px;
   height: 6px;
-  background: #57d490;
+  background: $teal;
   transition: transform 350ms ease;
 }
 
@@ -519,6 +531,35 @@ footer {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
+  }
+
+  .progress {
+    display:none;
+  }
+
+  .dev-notes {
+    display:block;
+  }
+
+  body {
+    font-size: 9px;
+  }
+
+  .checklist {
+    max-width: 200px;
+    margin-bottom:20px;
+  }
+
+  .checklist-item {
+    margin:0;
+  }
+
+  input[type=checkbox]:checked {
+    &~.checkbox,
+    &~.checklist-item__title,
+    &~.checklist-item__expand{
+      display:none;
+    }
   }
 
   img {
