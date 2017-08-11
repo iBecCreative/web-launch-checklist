@@ -91,28 +91,28 @@ function resetCheckboxes() {
   countChecked();
 }
 
-function shareButtonInit() {
-  const twitterButton = document.querySelector('.social-buttons__twitter');
-  const facebookButton = document.querySelector('.social-buttons__facebook');
+// function shareButtonInit() {
+//   const twitterButton = document.querySelector('.social-buttons__twitter');
+//   const facebookButton = document.querySelector('.social-buttons__facebook');
 
-  const left = window.innerWidth / 2 - 600 / 2 + window.screenX;
-  const top = window.innerHeight / 2 - 480 / 2 + window.screenY;
-  const popParams = `scrollbars=no,width=600,height=480,top=${top},left=${left}`;
+//   const left = window.innerWidth / 2 - 600 / 2 + window.screenX;
+//   const top = window.innerHeight / 2 - 480 / 2 + window.screenY;
+//   const popParams = `scrollbars=no,width=600,height=480,top=${top},left=${left}`;
 
-  twitterButton.addEventListener('click', function() {
-    const newWindow = window.open("https://twitter.com/intent/tweet/?text=A%20better%20web%20launch%20checklist%3A%20persistence%2C%20multiple%20formats%2C%20and%20easy%20to%20contribute%20to%2E&url=https%3A%2F%2Fweblaunchchecklist.com", '', popParams);
-    if (window.focus) {
-      newWindow.focus();
-    }
-  });
+//   twitterButton.addEventListener('click', function() {
+//     const newWindow = window.open("https://twitter.com/intent/tweet/?text=A%20better%20web%20launch%20checklist%3A%20persistence%2C%20multiple%20formats%2C%20and%20easy%20to%20contribute%20to%2E&url=https%3A%2F%2Fweblaunchchecklist.com", '', popParams);
+//     if (window.focus) {
+//       newWindow.focus();
+//     }
+//   });
 
-  facebookButton.addEventListener('click', function() {
-    const newWindow = window.open("https://www.facebook.com/dialog/share?app_id=320022855077523&href=https%3A%2F%2Fweblaunchchecklist.com&display=popup&redirect_uri=https%3A%2F%2Fweblaunchchecklist.com&quote=A%20better%20web%20launch%20checklist%3A%20persistence%2C%20multiple%20formats%2C%20and%20easy%20to%20contribute%20to%2E", '', popParams);
-    if (window.focus) {
-      newWindow.focus();
-    }
-  });
-}
+//   facebookButton.addEventListener('click', function() {
+//     const newWindow = window.open("https://www.facebook.com/dialog/share?app_id=320022855077523&href=https%3A%2F%2Fweblaunchchecklist.com&display=popup&redirect_uri=https%3A%2F%2Fweblaunchchecklist.com&quote=A%20better%20web%20launch%20checklist%3A%20persistence%2C%20multiple%20formats%2C%20and%20easy%20to%20contribute%20to%2E", '', popParams);
+//     if (window.focus) {
+//       newWindow.focus();
+//     }
+//   });
+// }
 
 
 window.onload = function () {
